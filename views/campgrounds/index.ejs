@@ -1,0 +1,69 @@
+<div class="container-fluid mb-3">
+  <div id="cluster-map"></div>
+</div>
+<hr />
+<% layout('layouts/boilerplate') %>
+<h1>Campgrounds</h1>
+<div>
+  <a class="btn btn-primary my-3" href="/campgrounds/new">Add new campground</a>
+</div>
+<div class="form-group row mb-3">
+  <%- include('../partials/searchBar.ejs')%>
+</div>
+<% for (let camp of campgrounds) { %>
+<div class="card mb-3">
+  <div class="row">
+    <div class="col-md-4">
+      <% if(camp.image.length) { %>
+      <img class="img-fluid" alt="" src="<%= camp.image[0].url %>" />
+      <% } else {%>
+      <img
+        class="img-fluid"
+        alt=""
+        src="https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg"
+      />
+      <% } %>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"><%= camp.title %></h5>
+        <p class="card-text"><%= camp.description%></p>
+        <p class="card-text">
+          <small class="text-muted"><%= camp.location %></small>
+          <small class="float-end text-muted"
+            ><i>- <%= camp.author.username %></i></small
+          >
+        </p>
+        <a href="/campgrounds/<%= camp._id %>" class="btn btn-info text-light"
+          >View</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<% } %>
+<% if (q === false) { %> 
+<nav class="container">
+  <ul class="pagination justify-content-center my-5">
+    <% if (page && page) {%>
+    <li class="page-item <%= prevPage === '' ? 'disabled':'' %>">
+      <a class="page-link" href="<%= prevPage %>" tabindex="-1">Previous</a>
+    </li>
+    <% pageLink.forEach((plink, i) => { %>
+    <li class="page-item <%= i === page - 1 ? 'disabled':'' %> ">
+      <a class="page-link" href="<%= plink %>"><%= i+1 %></a>
+    </li>
+    <% }) %>
+    <li class="page-item <%= nextPage === '' ? 'disabled':'' %> ">
+      <a class="page-link" href="<%= nextPage %>">Next</a>
+    </li>
+    <% } %>
+  </ul>
+</nav>
+<% } %> 
+<script>
+  const mapToken = "<%- process.env.MAPBOX_TOKEN %>";
+  const campgrounds = {features: <%- JSON.stringify(campgrounds) %>}
+</script>
+
+<script src="/js/mapBoxClusters.js"></script>

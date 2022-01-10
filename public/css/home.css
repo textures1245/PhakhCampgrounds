@@ -1,0 +1,27 @@
+body {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("https://res.cloudinary.com/dg03o1tta/image/upload/v1639548915/PhakhCamper/sam-marx-a1mVFtmmWjI-unsplash_opftmn.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.cover-container {
+    max-width: 60vw;
+}
+
+.nav-link {
+    padding: 0.25rem 0;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    margin-left: 1rem;
+}
+
+.active {
+    color: white;
+    border-bottom: 00.10rem solid rgba(255, 255, 255, 0.5);
+}
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, 0.25);
+    border-bottom: 00.10rem solid rgba(255, 255, 255, 0.5);
+}
