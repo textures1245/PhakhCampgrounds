@@ -1,0 +1,12 @@
+<%- layout('/layouts/boilerplate.ejs') %>
+<div class="row">
+    <div class="col-6 offset-3">
+        <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading"><%= statusCode %> Error Status Code </h4>
+            <p>Error: <%= err.message %></p>
+          </div> 
+          <div>
+              <a class="btn btn-secondary" href="javascript: history.back()">Go Back</a>
+          </div>
+    </div>
+</div>

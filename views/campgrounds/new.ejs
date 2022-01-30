@@ -1,0 +1,108 @@
+<% layout('layouts/boilerplate') %>
+<div class="row">
+  <h1 class="text-center">New Campground</h1>
+  <div class="mb-5 col-6 offset-3">
+    <form action="/campgrounds" method="POST" novalidate class="validation-form" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label class="form-label" for="title">Title</label>
+        <input
+          class="form-control"
+          type="text"
+          id="title"
+          name="campground[title]"
+          placeholder="Campground title"
+          required
+        />
+        <div class="valid-feedback">
+          Valid!
+        </div>
+        <div class="invalid-feedback">
+          This form can't be blank!
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="location">Location</label>
+        <input
+          class="form-control"
+          type="text"
+          id="location"
+          name="campground[location]"
+          placeholder="City, State/province/area"
+          required
+        />
+        <div class="valid-feedback">
+          Valid!
+        </div>
+        <div class="invalid-feedback">
+          This form can't be blank!
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label">Add images</label>
+        <input  class="form-control mb-3" type="file" name="image" id="image" multiple>
+        <div class="valid-feedback">
+          Valid!
+        </div>
+        <div class="invalid-feedback">
+          This form can't be blank!
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="price">Campground price</label>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="price-label">$</span>
+          </div>
+          <input
+            type="text"
+            class="form-control"
+            id="price"
+            name="campground[price]"
+            placeholder="0.00"
+            aria-describedby="price-label"
+            required
+          />
+          <div class="valid-feedback">
+            Valid!
+          </div>
+          <div class="invalid-feedback">
+            This form can't be blank!
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="category">Category</label>
+        <select required name="campground[category]" id="category" class="form-select" multiple>
+          <option value="" selected>Chooses categories...</option>
+          <option value="River">River</option>
+          <option value="Valley">Valley</option>
+          <option value="Mountain">Mountain</option>
+        </select>
+        <div class="valid-feedback">
+          Valid!
+        </div>
+        <div class="invalid-feedback">
+          This form can't be blank!
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="description">Description</label>
+        <textarea
+          class="form-control"
+          type="text"
+          id="description"
+          name="campground[description]"
+          required
+        ></textarea>
+        <div class="valid-feedback">
+          Valid!
+        </div>
+        <div class="invalid-feedback">
+          This form can't be blank!
+        </div>
+      </div>
+      <button class="btn btn-success">Add</button>
+    </form>
+    <div class="mt-3"><%- include('../partials/footer') %></div>
+  </div>
+</div>

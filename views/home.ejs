@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/css/app.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/fade-bg.css" />
+    <link rel="icon" href="/images/camping.ico" sizes="32x32" type="image/x-icon">
+    <%- include('./partials/header') %>
+  </head>
+  <script type="module" src="/js/fadeBg.js"></script>
+  <body>
+    <div class="d-flex text-center text-white main">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column ">
+      <header class="mb-auto">
+        <div id="trigger-1" class="navbar-expand-lg">
+          <h3 class="float-md-left mb-0">Phakh-campers</h3>
+          <nav class="nav nav-masthead justify-content-center float-md-right">
+            <a class="nav-link active btn" aria-current="page" href="/">Home</a>
+            <a class="nav-link btn" href="/campgrounds">Campgrounds</a>
+            <a class="nav-link btn" href="/login">Login</a>
+            <a class="nav-link btn" href="/register">Register</a>
+            <% if(currentUser) { %>
+            <a class="nav-link btn" href="/logout">Logout</a>
+            <% } %>
+          </nav>
+        </div>
+        <hr />
+      </header>
+      <main class="px-3 main-content mb-auto">
+        <h1>Phakh-Campers</h1>
+        <p class="lead">Welcome to Phakh-Campers</p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+        voluptatum natus repellendus laboriosam excepturi magni cumque, veniam,
+        ut alias hic quia. Laborum aspernatur perspiciatis accusamus earum
+        sapiente tenetur doloremque assumenda.
+        <br /><br />
+        <a
+          href="/campgrounds"
+          class="btn btn-md btn-secondary fw-bold text-dark bg-white"
+          >Visit Campgrounds</a
+        >
+      </div>
+    </main>
+  </div>
+  <div id="" class="container-fluid text-center section-light lead">
+    <p class="display-2 t-1 letter-space"><i>MOST</i></p>
+    <p class="display-5 t-2 text-muted separator">Visiting campgrounds website</p>
+    <p id ="trigger-2" class="t-3">On 2022</p>
+  </div>
+  <div  class="subBg1">
+  </div>
+  <div id="trigger-3" class="container-fluid text-center section-light">
+    <p class="display-5 text-muted t-4">You can easily find</p>
+    <p class="display-4 t-5 ">Any <strong class="strong-popular">popular</strong> campgrounds</p>
+    <p class="fs-2 text-muted t-6">On our website</p>
+  </div>
+  <div class="container-fluid text-center section-dark">
+    <p class="display-4 text-muted">Just</p>
+    <hr size="4">
+    <p class="display-2 letter-space t-7">One Click</p>
+  </div>
+  <div class="subBg2">
+  </div>
+  <div class="container-fulid section-light-blank">
+    <hr>
+  </div>
+  <div class="row col-12 mx-auto">
+    <div id="campBg1" class="col-6 campBg1"></div>
+    <div id="campBg2" class="col-6 campBg2"></div>
+  </div>
+  <div id="campBg3" class="campBg3">
+  </div>
+  <div id="pin-4" class="container-fluid text-center section-pd-only lead trigger-4">
+    <p class="display-5 text-muted t-8">Come to join</p>
+    <p class="display-3 t-9"><i>Our membership now</i></p>
+    <p class="t-10">To reserve the camp before anyone else!</p>
+    <br>
+    <div  class="d-1">
+      <div class="d-grid gap-4 col-3 mx-auto mb-4">
+        <a class="btn btn-primary fs-6 rounded-pill" href="/register" type="button">Join Now!</a>
+      </div>
+      <div class="separator">Already on membership?</div>
+      <div class="d-grid gap-4 col-3 mx-auto mt-4">
+        <a class="btn btn-primary rounded-pill" href="/login" type="button">Login Now!</a>
+      </div>
+    </div>
+  </div>
+  <%- include("./partials/main-footer") %> 
+  <!-- <footer class="mt-auto text-whtie-50">
+    <p>&copy; 2021 Phakh-Campers</p>
+  </footer> -->
+</body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+  <script src="/js/animationScroll.js"></script>
+</html>

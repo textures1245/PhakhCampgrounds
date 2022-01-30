@@ -1,0 +1,102 @@
+/* body {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("https://res.cloudinary.com/dg03o1tta/image/upload/v1639548915/PhakhCamper/sam-marx-a1mVFtmmWjI-unsplash_opftmn.jpg");
+    background-size: cover;
+    background-position: center;
+} */
+.cover-container {
+    max-width: 60vw;
+}
+
+.nav-link {
+    padding: 0.25rem 0;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    margin-left: 1rem;
+}
+
+.active {
+    color: white;
+    border-bottom: 00.10rem solid rgba(255, 255, 255, 0.5);
+}
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, 0.25);
+    border-bottom: 00.10rem solid rgba(255, 255, 255, 0.5);
+}
+
+.section-gray {
+    background-color: #f3f3f3;
+}
+
+.subBg1, .subBg2, .main{
+    position: relative;
+    opacity: 0.90;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+}
+
+.subBg1 {
+    background-image: url("https://images.unsplash.com/photo-1597071118769-3d970bd1652b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1399&q=80");
+    min-height: 500px;
+}
+
+.subBg2 {
+    background-image: url("https://images.unsplash.com/photo-1455763916899-e8b50eca9967?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+    min-height: 350px;
+}
+
+.campBg1 {
+    background-image: url("https://images.unsplash.com/photo-1571687949921-1306bfb24b72?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+    min-height: 600px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.campBg2 {
+    background-image: url("https://images.unsplash.com/photo-1534187886935-1e1236e856c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2696&q=80");
+    min-height: 600px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.campBg3 {
+    background-image: url("https://images.unsplash.com/photo-1517823382935-51bfcb0ec6bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+    min-height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.section-pd-only {
+    padding: 60px;
+}
+
+.section-light-blank {
+    padding: 60px;
+    background-color: #f4f4f4;
+}
+.section-dark-blank {
+    padding: 60px;
+    background-color: #282e34;
+}
+.section-light {
+    padding: 110px;
+    background-color: #f4f4f4;
+    letter-spacing: 2px;
+}
+
+.section-dark {
+    padding: 110px;
+    background-color: #282e34;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.letter-space {
+    letter-spacing: 15px;
+}

@@ -1,0 +1,28 @@
+@keyframes fadeBgs {
+    0% {
+      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("https://res.cloudinary.com/dg03o1tta/image/upload/v1639548915/PhakhCamper/sam-marx-a1mVFtmmWjI-unsplash_opftmn.jpg");
+    }
+    30% {
+      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url("https://images.unsplash.com/photo-1520824071669-892f70d8a23d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1409&q=80");
+    }
+    60% {
+      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("https://images.unsplash.com/photo-1496947850313-7743325fa58c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+    }
+    99% {
+      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url("https://images.unsplash.com/photo-1517823382935-51bfcb0ec6bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80");
+    }
+    100% {
+      background: black;
+    }
+  }
+  .main {
+    height: 100vh;
+    opacity: 0.95;
+    background-size: cover;
+    background-position: center;
+    animation:fadeBgs 50s infinite ease-in-out;
+  }

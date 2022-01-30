@@ -1,0 +1,11 @@
+<% if(count > endCount) { %> 
+<div class="mt-5 text-center">
+  <form action="/login" method="POST" novalidate class="validation-form">
+    <img src="/create-captcha" alt="captcha" />
+    <input style="width: 40%;" class="mx-3 mt-3 d-inline form-control " type="text" name="captcha" id="captcha" required />
+    <div class="invalid-feedback">This form can't be blank!</div>
+  </form>
+  <div>
+</div>
+</div> 
+<% } %> 
