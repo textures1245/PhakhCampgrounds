@@ -109,7 +109,7 @@ module.exports.campDetail = async (req, res) => {
       },
     })
     .populate("author");
-    console.log(camp);
+    // console.log(camp);
   if (!camp) {
     req.flash("error", "The page you are looking for cannot be found :( ");
     return res.redirect("/campgrounds");

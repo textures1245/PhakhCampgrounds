@@ -5,7 +5,7 @@
   <hr>
 </div>
 <div class="row">
-  <div class="col-6">
+  <div class="col-lg-6">
     <div class="card mb-4">
       <div
         id="campgroundCarousel"
@@ -89,7 +89,7 @@
       </div>
     </div>
   </div>
-  <div class="col-6">
+  <div class="col-lg-6">
     <% if(currentUser){ %>
     <div>
       <h3 class="mt-5 underlined fw-light text-center">
@@ -177,10 +177,20 @@
         <button class="mb-3 btn btn-success">Submit</button>
       </form>
       <% } %>
-      <div class="mt-2">
+      <div class="mt-2 mb-4">
         <h3 class="fw-light">Reviews</h3>
-        <hr />
+        <hr/>
       </div>
+
+
+      <% if(camp.reviews.length == 0)  { %> 
+      <div class="alert alert-info">
+        <p class="fw-ligh lead text-center">This camp doesn't have any reviews yet.</p>
+        <% if(currentUser) { %>
+         <p class="text-center">Be the first one who reviewed this!</sm>
+        <% } %> 
+      </div>
+      <% } %> 
       <% for(let review of camp.reviews) { %>
       <div class="card my-3">
         <div class="card-body">

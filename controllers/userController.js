@@ -1,6 +1,5 @@
 const User = require("../models/user");
 const svgCaptchar = require("svg-captcha");
-const recaptcha = require("recaptcha-v3");
 
 module.exports.userRegister = (req, res) => {
   res.render("user/register", { title: "Register" });
@@ -8,7 +7,7 @@ module.exports.userRegister = (req, res) => {
 
 module.exports.registered = async (req, res, next) => {
     try {
-      const { username, password, password2, email } = req.body;
+      const { username, password, password2, email } = req.body; 
       if (password !== password2) {
         req.flash("error", "Your both password are incorrect, please try again.")
         return res.redirect("/register");
